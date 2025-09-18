@@ -1,10 +1,12 @@
 from dotenv import load_dotenv
 import os
+# Yes, this is from the openai package.
 from openai import OpenAI
 
 load_dotenv(override=True)
 openai_api_key = os.getenv("OPEN_API_KEY")
 
+# Yes, OpenAI is a class from the openai package.
 client = OpenAI(api_key=openai_api_key)
 
 response = client.chat.completions.create(
